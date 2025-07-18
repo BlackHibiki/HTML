@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REG Registration Office - Maejo University</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center py-3 px-6">
+            <!-- Logo + Title -->
+            <div class="flex items-center space-x-4">
+                <a href="index.html">
+                    <img src="Maejo_logo.png" alt="Maejo University Logo" class="h-14">
+                </a>
+                <div class="text-green-700 leading-tight">
+                    <h1 class="text-4xl font-extrabold">REG</h1>
+                    <p class="text-lg font-semibold">Registration Office</p>
+                    <p class="text-sm">Maejo University</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="bg-green-600 text-white text-sm relative">
+            <div class="container mx-auto flex justify-between items-center px-6 py-2">
+
+                <!-- Left: Hamburger & Menu -->
+                <div class="flex items-center gap-4">
+                    <!-- Hamburger (Mobile) -->
+                    <button onclick="toggleDropdown('mainMenu')" class="md:hidden focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+
+                    <!-- Menu (Desktop) -->
+                    <div class="hidden md:flex gap-4 items-center">
+                        <a href="Homepage.html" class="hover:underline">หน้าหลัก</a>
+
+                        <div class="relative group">
+                            <button onclick="toggleDropdown('academicDropdown')" class="flex items-center hover:underline focus:outline-none">
+                                บริการวิชาการ <svg class="ml-1 w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z"/></svg>
+                            </button>
+                            <div id="academicDropdown" class="absolute hidden bg-white text-green-700 mt-2 rounded shadow-lg w-48 z-10">
+                                <a href="#" class="block px-4 py-2 hover:bg-green-100">ตารางเรียน</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-green-100">ปฏิทินการศึกษา</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-green-100">ตารางการใช้ห้อง</a>
+                            </div>
+                        </div>
+
+                        <div class="relative group">
+                            <button onclick="toggleDropdown('guideDropdown')" class="flex items-center hover:underline focus:outline-none">
+                                คู่มือ <svg class="ml-1 w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z"/></svg>
+                            </button>
+                            <div id="guideDropdown" class="absolute hidden bg-white text-green-700 mt-2 rounded shadow-lg w-48 z-10">
+                                <a href="student_guide.html" class="block px-4 py-2 hover:bg-green-100">คู่มือนักศึกษา</a>
+                                <a href="teacher_guide.html" class="block px-4 py-2 hover:bg-green-100">คู่มืออาจารย์</a>
+                                <a href="staff_guide.html" class="block px-4 py-2 hover:bg-green-100">คู่มือเจ้าหน้าที่</a>
+                            </div>
+                        </div>
+
+                        <a href="faq.html" class="hover:underline">คำถามที่พบบ่อย</a>
+                        <a href="contact.html" class="hover:underline">ติดต่อ</a>
+                    </div>
+                </div>
+
+                <!-- Right: Login -->
+                <div class="flex gap-4 items-center">
+                    <div class="relative group">
+                        <button onclick="toggleDropdown('loginDropdown')" 
+                            class="bg-white text-green-700 font-bold text-xs md:text-sm px-3 py-1 rounded hover:bg-green-100 transition flex items-center">
+                            เข้าสู่ระบบ
+                            <svg class="ml-1 w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z"/></svg>
+                        </button>
+                        <div id="loginDropdown" class="absolute right-0 hidden bg-white text-green-700 mt-2 rounded shadow-lg w-48 z-10">
+                            <a href="student_login.html" class="block px-4 py-2 hover:bg-green-100">เข้าสู่ระบบสำหรับนักศึกษา</a>
+                            <a href="teacher_login.html" class="block px-4 py-2 hover:bg-green-100">เข้าสู่ระบบสำหรับอาจารย์</a>
+                        </div>
+                    </div>
+                    <div class="text-white text-xs md:text-sm">ไทย | Eng</div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mainMenu" class="md:hidden hidden bg-white text-green-700 px-6 py-4 space-y-2 shadow-lg">
+                <a href="Homepage.html" class="block py-2 hover:bg-green-100 rounded">หน้าหลัก</a>
+                <button onclick="toggleDropdown('academicDropdownMobile')" class="flex items-center w-full py-2 hover:bg-green-100 rounded">
+                    บริการวิชาการ <svg class="ml-1 w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z"/></svg>
+                </button>
+                <div id="academicDropdownMobile" class="hidden pl-4">
+                    <a href="#" class="block py-2 hover:bg-green-100 rounded">ตารางเรียน</a>
+                    <a href="#" class="block py-2 hover:bg-green-100 rounded">ปฏิทินการศึกษา</a>
+                    <a href="#" class="block py-2 hover:bg-green-100 rounded">ตารางการใช้ห้อง</a>
+                </div>
+
+                <button onclick="toggleDropdown('guideDropdownMobile')" class="flex items-center w-full py-2 hover:bg-green-100 rounded">
+                    คู่มือ <svg class="ml-1 w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z"/></svg>
+                </button>
+                <div id="guideDropdownMobile" class="hidden pl-4">
+                    <a href="student_guide.html" class="block py-2 hover:bg-green-100 rounded">นักศึกษา</a>
+                    <a href="teacher_guide.html" class="block py-2 hover:bg-green-100 rounded">อาจารย์</a>
+                    <a href="staff_guide.html" class="block py-2 hover:bg-green-100 rounded">เจ้าหน้าที่</a>
+                </div>
+
+                <a href="faq.html" class="block py-2 hover:bg-green-100 rounded">คำถามที่พบบ่อย</a>
+                <a href="contact.html" class="block py-2 hover:bg-green-100 rounded">ติดต่อ</a>
+            </div>
+        </nav>
+    </header>
+    <!-- Main Content -->
+    <body class="bg-gray-50">
+        <table>
+    <caption>ปฏิทินการศึกษา ปีการศึกษา 2568</caption>
+    <thead>
+      <tr>
+        <th>รายการ</th>
+        <th>วันเริ่มต้น</th>
+        <th>วันสุดท้าย</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>ลงทะเบียนปกติ (on-line)</td><td>7 เม.ย. 2569 8:30 น.</td><td>7 เม.ย. 2569 23:59 น.</td></tr>
+      <tr><td>ชั้นปี 1 (ดาวน์โหลดรหัสเข้า)</td><td>17 เม.ย. 2569 8:30 น.</td><td>17 เม.ย. 2569 23:59 น.</td></tr>
+      <tr><td>ชั้นปี 2 (ดาวน์โหลดรหัสเข้า)</td><td>17 เม.ย. 2569 8:30 น.</td><td>17 เม.ย. 2569 23:59 น.</td></tr>
+      <tr><td>ชั้นปี 3 (ดาวน์โหลดรหัสเข้า)</td><td>17 เม.ย. 2569 8:30 น.</td><td>17 เม.ย. 2569 23:59 น.</td></tr>
+      <tr><td>ชั้นปี 4 (ดาวน์โหลดรหัสเข้า)</td><td>17 เม.ย. 2569 8:30 น.</td><td>17 เม.ย. 2569 23:59 น.</td></tr>
+      <tr><td>ชั้นปีอื่นๆ</td><td>17 เม.ย. 2569 8:30 น.</td><td>17 เม.ย. 2569 23:59 น.</td></tr>
+      <tr><td>วันเปิดภาคการศึกษา</td><td>20 เม.ย. 2569 8:00 น.</td><td>20 เม.ย. 2569 8:00 น.</td></tr>
+      <tr><td>ลงทะเบียนเพิ่ม/ลด/เปลี่ยนกลุ่ม (on-line)</td><td>20 เม.ย. 2569 8:30 น.</td><td>22 เม.ย. 2569 23:59 น.</td></tr>
+      <tr><td>ช่วงวันทำการเพิ่มรายวิชา</td><td>20 เม.ย. 2569 8:30 น.</td><td>22 เม.ย. 2569 16:30 น.</td></tr>
+      <tr><td>ช่วงวันทำการตรวจรายวิชา</td><td>20 เม.ย. 2569 8:30 น.</td><td>22 เม.ย. 2569 16:30 น.</td></tr>
+      <tr><td>ช่วงวันทำการเปลี่ยนกลุ่มรายวิชา</td><td>20 เม.ย. 2569 8:30 น.</td><td>22 เม.ย. 2569 16:30 น.</td></tr>
+      <tr><td>ช่วงวันรายวิชาโดยได้รับหน่วยกิตคืนเต็ม</td><td>17 เม.ย. 2569 8:30 น.</td><td>22 เม.ย. 2569 16:30 น.</td></tr>
+      <tr><td>ลงทะเบียนเข้าช้า</td><td>20 เม.ย. 2569 8:30 น.</td><td>22 เม.ย. 2569 23:59 น.</td></tr>
+      <tr><td>งวดชำระเงินแบบปกติ</td><td>27 เม.ย. 2569 8:30 น.</td><td>3 พ.ค. 2569 23:59 น.</td></tr>
+      <tr><td>ชำระเงินผ่านระบบชำระผ่าน WEB</td><td>27 เม.ย. 2569 8:30 น.</td><td>3 พ.ค. 2569 23:59 น.</td></tr>
+      <tr><td>ชำระเงินที่เคาน์เตอร์ธนาคารกรุงไทยทุกสาขาทั่วประเทศ</td><td>27 เม.ย. 2569 8:30 น.</td><td>3 พ.ค. 2569 16:30 น.</td></tr>
+      <tr><td>วันส่งงานสำหรับวิชาที่จัดการผ่านระบบออนไลน์</td><td>11 พ.ค. 2569 8:00 น.</td><td>8 มิ.ย. 2569 16:30 น.</td></tr>
+      <tr><td>วันสุดท้ายของภาคเรียนการสอน</td><td>7 มิ.ย. 2569 8:00 น.</td><td>7 มิ.ย. 2569 16:30 น.</td></tr>
+      <tr><td>ช่วงวันสอบปลายภาค</td><td>8 มิ.ย. 2569 8:00 น.</td><td>14 มิ.ย. 2569 16:30 น.</td></tr>
+      <tr><td>วันสำเร็จการศึกษา</td><td>15 มิ.ย. 2569 8:00 น.</td><td>15 มิ.ย. 2569 8:00 น.</td></tr>
+      <tr><td>วันสุดท้ายของการส่งผลการศึกษา</td><td>22 มิ.ย. 2569 16:30 น.</td><td>22 มิ.ย. 2569 16:30 น.</td></tr>
+      <tr><td>วันประกาศผลการศึกษา</td><td>23 มิ.ย. 2569 16:30 น.</td><td>23 มิ.ย. 2569 16:30 น.</td></tr>
+    </tbody>
+  </table>
+    </body>
+    <!-- Footer -->
+    <footer class="bg-green-700 text-white py-6 text-center text-sm">
+        <!--ใส่ข้อมูลส่วนท้ายตรงนี้-->
+    </footer>
+
+    <!-- Script -->
+    <script>
+        function toggleDropdown(id) {
+            document.getElementById(id).classList.toggle('hidden');
+        }
+
+        // Close dropdown when clicking outside
+        window.addEventListener('click', function(e) {
+            const ids = ['academicDropdown', 'guideDropdown', 'loginDropdown', 'mainMenu', 'academicDropdownMobile', 'guideDropdownMobile'];
+            ids.forEach(id => {
+                const el = document.getElementById(id);
+                if (el && !el.contains(e.target) && !e.target.closest(`[onclick="toggleDropdown('${id}')"]`)) {
+                    el.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
