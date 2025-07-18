@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REG Registration Office - Maejo University</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Header -->
@@ -43,10 +45,14 @@
                         <a href="Homepage.html" class="hover:underline">หน้าหลัก</a>
 
                         <div class="relative group">
-                            <button onclick="toggleDropdown('academicDropdown')" class="flex items-center hover:underline focus:outline-none">
-                                บริการวิชาการ <svg class="ml-1 w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z"/></svg>
+                            <button onclick="toggleDropdown('academicDropdown')"
+                                class="flex items-center hover:underline focus:outline-none">
+                                บริการวิชาการ <svg class="ml-1 w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" />
+                                </svg>
                             </button>
-                            <div id="academicDropdown" class="absolute hidden bg-white text-green-700 mt-2 rounded shadow-lg w-48 z-10">
+                            <div id="academicDropdown"
+                                class="absolute hidden bg-white text-green-700 mt-2 rounded shadow-lg w-48 z-10">
                                 <a href="#" class="block px-4 py-2 hover:bg-green-100">ตารางเรียน</a>
                                 <a href="#" class="block px-4 py-2 hover:bg-green-100">ปฏิทินการศึกษา</a>
                                 <a href="#" class="block px-4 py-2 hover:bg-green-100">ตารางการใช้ห้อง</a>
@@ -54,13 +60,20 @@
                         </div>
 
                         <div class="relative group">
-                            <button onclick="toggleDropdown('guideDropdown')" class="flex items-center hover:underline focus:outline-none">
-                                คู่มือ <svg class="ml-1 w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z"/></svg>
+                            <button onclick="toggleDropdown('guideDropdown')"
+                                class="flex items-center hover:underline focus:outline-none">
+                                คู่มือ <svg class="ml-1 w-4 h-4 fill-current" viewBox="0 0 20 20">
+                                    <path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" />
+                                </svg>
                             </button>
-                            <div id="guideDropdown" class="absolute hidden bg-white text-green-700 mt-2 rounded shadow-lg w-48 z-10">
-                                <a href="student_guide.html" class="block px-4 py-2 hover:bg-green-100">คู่มือนักศึกษา</a>
-                                <a href="teacher_guide.html" class="block px-4 py-2 hover:bg-green-100">คู่มืออาจารย์</a>
-                                <a href="staff_guide.html" class="block px-4 py-2 hover:bg-green-100">คู่มือเจ้าหน้าที่</a>
+                            <div id="guideDropdown"
+                                class="absolute hidden bg-white text-green-700 mt-2 rounded shadow-lg w-48 z-10">
+                                <a href="student_guide.html"
+                                    class="block px-4 py-2 hover:bg-green-100">คู่มือนักศึกษา</a>
+                                <a href="teacher_guide.html"
+                                    class="block px-4 py-2 hover:bg-green-100">คู่มืออาจารย์</a>
+                                <a href="staff_guide.html"
+                                    class="block px-4 py-2 hover:bg-green-100">คู่มือเจ้าหน้าที่</a>
                             </div>
                         </div>
 
@@ -72,14 +85,19 @@
                 <!-- Right: Login -->
                 <div class="flex gap-4 items-center">
                     <div class="relative group">
-                        <button onclick="toggleDropdown('loginDropdown')" 
+                        <button onclick="toggleDropdown('loginDropdown')"
                             class="bg-white text-green-700 font-bold text-xs md:text-sm px-3 py-1 rounded hover:bg-green-100 transition flex items-center">
                             เข้าสู่ระบบ
-                            <svg class="ml-1 w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z"/></svg>
+                            <svg class="ml-1 w-3 h-3 fill-current" viewBox="0 0 20 20">
+                                <path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" />
+                            </svg>
                         </button>
-                        <div id="loginDropdown" class="absolute right-0 hidden bg-white text-green-700 mt-2 rounded shadow-lg w-48 z-10">
-                            <a href="student_login.html" class="block px-4 py-2 hover:bg-green-100">เข้าสู่ระบบสำหรับนักศึกษา</a>
-                            <a href="teacher_login.html" class="block px-4 py-2 hover:bg-green-100">เข้าสู่ระบบสำหรับอาจารย์</a>
+                        <div id="loginDropdown"
+                            class="absolute right-0 hidden bg-white text-green-700 mt-2 rounded shadow-lg w-48 z-10">
+                            <a href="student_login.html"
+                                class="block px-4 py-2 hover:bg-green-100">เข้าสู่ระบบสำหรับนักศึกษา</a>
+                            <a href="teacher_login.html"
+                                class="block px-4 py-2 hover:bg-green-100">เข้าสู่ระบบสำหรับอาจารย์</a>
                         </div>
                     </div>
                     <div class="text-white text-xs md:text-sm">ไทย | Eng</div>
@@ -89,8 +107,11 @@
             <!-- Mobile Menu -->
             <div id="mainMenu" class="md:hidden hidden bg-white text-green-700 px-6 py-4 space-y-2 shadow-lg">
                 <a href="Homepage.html" class="block py-2 hover:bg-green-100 rounded">หน้าหลัก</a>
-                <button onclick="toggleDropdown('academicDropdownMobile')" class="flex items-center w-full py-2 hover:bg-green-100 rounded">
-                    บริการวิชาการ <svg class="ml-1 w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z"/></svg>
+                <button onclick="toggleDropdown('academicDropdownMobile')"
+                    class="flex items-center w-full py-2 hover:bg-green-100 rounded">
+                    บริการวิชาการ <svg class="ml-1 w-4 h-4 fill-current" viewBox="0 0 20 20">
+                        <path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" />
+                    </svg>
                 </button>
                 <div id="academicDropdownMobile" class="hidden pl-4">
                     <a href="#" class="block py-2 hover:bg-green-100 rounded">ตารางเรียน</a>
@@ -98,8 +119,11 @@
                     <a href="#" class="block py-2 hover:bg-green-100 rounded">ตารางการใช้ห้อง</a>
                 </div>
 
-                <button onclick="toggleDropdown('guideDropdownMobile')" class="flex items-center w-full py-2 hover:bg-green-100 rounded">
-                    คู่มือ <svg class="ml-1 w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z"/></svg>
+                <button onclick="toggleDropdown('guideDropdownMobile')"
+                    class="flex items-center w-full py-2 hover:bg-green-100 rounded">
+                    คู่มือ <svg class="ml-1 w-4 h-4 fill-current" viewBox="0 0 20 20">
+                        <path d="M5.25 7.5L10 12.25L14.75 7.5H5.25Z" />
+                    </svg>
                 </button>
                 <div id="guideDropdownMobile" class="hidden pl-4">
                     <a href="student_guide.html" class="block py-2 hover:bg-green-100 rounded">นักศึกษา</a>
@@ -113,94 +137,164 @@
         </nav>
     </header>
     <!-- Main Content -->
+
     <body class="bg-gray-50">
         <div class="max-w-6xl mx-auto">
-    <h1 class="text-3xl font-bold text-center text-green-600 mb-6">📅 ปฏิทินการศึกษา ปีการศึกษา 2568</h1>
-<div class="flex flex-col md:flex-row justify-center gap-4 mb-6">
-      <div>
-        <label class="block text-sm font-medium text-gray-700 mb-1">ชุดปฏิทิน</label>
-        <select class="w-full md:w-64 px-4 py-2 border border-gray-300 rounded-lg shadow-sm">
-          <option>1000:วิทยาลัยบริหารศาสตร์</option>
-          <option>1001:ปริญญาตรี ปกติ</option>
-          <option>1002:ปริญญาตรี สมทบ</option>
-          <option>1003:ปริญญาตรี ภาคปกติ วิทยาเขตฯ</option>
-          <option>1006:นักศึกษาทดลองเรียนบัณฑิตศึกษา</option>
-          <option>2001:บัณฑิตศึกษา ปกติ</option>
-          <option>2002:บัณฑิตศึกษา สมทบ</option>
-          <option>3001:ปริญญาเอก ปกติ</option>
-          <option>3002:ปริญญาเอก สมทบ</option>
-          <option>7001:แม่โจ้-ชุมพร</option>
-          <option>8001:แม่โจ้-แพร่</option>
-          <option>9999:TEST</option>
-        </select>
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-700 mb-1">ปีการศึกษา</label>
-        <select class="w-full md:w-40 px-4 py-2 border border-gray-300 rounded-lg shadow-sm">
-          <option>2568</option>
-          <option>2567</option>
-          <option>2566</option>
-        </select>
-      </div>
-      <div>
-        <label class="block text-sm font-medium text-gray-700 mb-1">ภาคเรียน</label>
-        <select class="w-full md:w-32 px-4 py-2 border border-gray-300 rounded-lg shadow-sm">
-          <option>1</option>
-          <option>2</option>
-          <option>3 (ฤดูร้อน)</option>
-        </select>
-      </div>
-    </div>
-    <div class="overflow-x-auto bg-white rounded-xl shadow-lg">
-      <table class="w-full table-auto border-collapse">
-        <thead class="bg-green-500 text-white">
-          <tr>
-            <th class="px-4 py-3 text-left">รายการ</th>
-            <th class="px-4 py-3 text-center">วันเริ่มต้น</th>
-            <th class="px-4 py-3 text-center">วันสุดท้าย</th>
-          </tr>
-        </thead>
-        <tbody class="text-sm divide-y divide-gray-200">
-          <tr class="hover:bg-green-100">
-            <td class="px-4 py-2 text-left">ลงทะเบียนปกติ (on-line)</td>
-            <td class="px-4 py-2 text-center">7 เม.ย. 2569 8:30 น.</td>
-            <td class="px-4 py-2 text-center">7 เม.ย. 2569 23:59 น.</td>
-          </tr>
-          <tr class="hover:bg-green-100">
-            <td class="px-4 py-2 text-left">ชั้นปี 1 (ดาวน์โหลดรหัสเข้า)</td>
-            <td class="px-4 py-2 text-center">17 เม.ย. 2569 8:30 น.</td>
-            <td class="px-4 py-2 text-center">17 เม.ย. 2569 23:59 น.</td>
-          </tr>
-          <tr class="hover:bg-green-100">
-            <td class="px-4 py-2 text-left">ชั้นปี 2 (ดาวน์โหลดรหัสเข้า)</td>
-            <td class="px-4 py-2 text-center">17 เม.ย. 2569 8:30 น.</td>
-            <td class="px-4 py-2 text-center">17 เม.ย. 2569 23:59 น.</td>
-          </tr>
-          <tr class="hover:bg-green-100">
-            <td class="px-4 py-2 text-left">ชั้นปี 3 (ดาวน์โหลดรหัสเข้า)</td>
-            <td class="px-4 py-2 text-center">17 เม.ย. 2569 8:30 น.</td>
-            <td class="px-4 py-2 text-center">17 เม.ย. 2569 23:59 น.</td>
-          </tr>
-          <tr class="hover:bg-green-100">
-            <td class="px-4 py-2 text-left">วันเปิดภาคการศึกษา</td>
-            <td class="px-4 py-2 text-center">20 เม.ย. 2569 8:00 น.</td>
-            <td class="px-4 py-2 text-center">20 เม.ย. 2569 8:00 น.</td>
-          </tr>
-          <tr class="hover:bg-green-100">
-            <td class="px-4 py-2 text-left">ลงทะเบียนเพิ่ม/ลด/เปลี่ยนกลุ่ม</td>
-            <td class="px-4 py-2 text-center">20 เม.ย. 2569 8:30 น.</td>
-            <td class="px-4 py-2 text-center">22 เม.ย. 2569 23:59 น.</td>
-          </tr>
-          <!-- เพิ่มรายการอื่นๆ ตามต้องการได้เลย -->
-          <tr class="hover:bg-green-100">
-            <td class="px-4 py-2 text-left">วันประกาศผลการศึกษา</td>
-            <td class="px-4 py-2 text-center">23 มิ.ย. 2569 16:30 น.</td>
-            <td class="px-4 py-2 text-center">23 มิ.ย. 2569 16:30 น.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+            <h1 class="text-3xl font-bold text-center text-green-600 mb-6">📅 ปฏิทินการศึกษา ปีการศึกษา 2568</h1>
+            <div class="flex flex-col md:flex-row justify-center gap-4 mb-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">ชุดปฏิทิน</label>
+                    <select class="w-full md:w-64 px-4 py-2 border border-gray-300 rounded-lg shadow-sm">
+                        <option>1000:วิทยาลัยบริหารศาสตร์</option>
+                        <option>1001:ปริญญาตรี ปกติ</option>
+                        <option>1002:ปริญญาตรี สมทบ</option>
+                        <option>1003:ปริญญาตรี ภาคปกติ วิทยาเขตฯ</option>
+                        <option>1006:นักศึกษาทดลองเรียนบัณฑิตศึกษา</option>
+                        <option>2001:บัณฑิตศึกษา ปกติ</option>
+                        <option>2002:บัณฑิตศึกษา สมทบ</option>
+                        <option>3001:ปริญญาเอก ปกติ</option>
+                        <option>3002:ปริญญาเอก สมทบ</option>
+                        <option>7001:แม่โจ้-ชุมพร</option>
+                        <option>8001:แม่โจ้-แพร่</option>
+                        <option>9999:TEST</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">ปีการศึกษา</label>
+                    <select class="w-full md:w-40 px-4 py-2 border border-gray-300 rounded-lg shadow-sm">
+                        <option>2568</option>
+                        <option>2567</option>
+                        <option>2566</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">ภาคเรียน</label>
+                    <select class="w-full md:w-32 px-4 py-2 border border-gray-300 rounded-lg shadow-sm">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3 (ฤดูร้อน)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="overflow-x-auto bg-white rounded-xl shadow-lg">
+                <table class="w-full table-auto border-collapse">
+                    <thead class="bg-green-500 text-white">
+                        <tr>
+                            <th class="px-4 py-3 text-left">รายการ</th>
+                            <th class="px-4 py-3 text-center">วันเริ่มต้น</th>
+                            <th class="px-4 py-3 text-center">วันสุดท้าย</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm divide-y divide-gray-200">
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">ลงทะเบียนปกติ (on-line)</td>
+                            <td class="px-4 py-2 text-center">7 เม.ย. 2569 8:30 น.</td>
+                            <td class="px-4 py-2 text-center">7 เม.ย. 2569 23:59 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">ชั้นปี 1 (ตามรหัสปีเข้า)</td>
+                            <td class="px-4 py-2 text-center">17 เม.ย. 2569 8:30 น.</td>
+                            <td class="px-4 py-2 text-center">17 เม.ย. 2569 23:59 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">ชั้นปี 2 (ตามรหัสปีเข้า)</td>
+                            <td class="px-4 py-2 text-center">17 เม.ย. 2569 8:30 น.</td>
+                            <td class="px-4 py-2 text-center">17 เม.ย. 2569 23:59 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">ชั้นปี 3 (ตามรหัสปีเข้า)</td>
+                            <td class="px-4 py-2 text-center">17 เม.ย. 2569 8:30 น.</td>
+                            <td class="px-4 py-2 text-center">17 เม.ย. 2569 23:59 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">ชั้นปีอื่นๆ</td>
+                            <td class="px-4 py-2 text-center">17 เม.ย. 2569 8:30 น.</td>
+                            <td class="px-4 py-2 text-center">17 เม.ย. 2569 23:59 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">วันเปิดภาคการศึกษา</td>
+                            <td class="px-4 py-2 text-center">20 เม.ย. 2569 8:00 น.</td>
+                            <td class="px-4 py-2 text-center">20 เม.ย. 2569 8:00 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">ลงทะเบียนเพิ่ม/ลด/เปลี่ยนกลุ่ม (on-line)</td>
+                            <td class="px-4 py-2 text-center">20 เม.ย. 2569 8:30 น.</td>
+                            <td class="px-4 py-2 text-center">22 เม.ย. 2569 23:59 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">ช่วงวันทำการเพิ่มรายวิชา</td>
+                            <td class="px-4 py-2 text-center">20 เม.ย. 2569 8:30 น.</td>
+                            <td class="px-4 py-2 text-center">22 เม.ย. 2569 23:59 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">ช่วงวันทำการลดรายวิชา</td>
+                            <td class="px-4 py-2 text-center">20 เม.ย. 2569 8:30 น.</td>
+                            <td class="px-4 py-2 text-center">22 เม.ย. 2569 23:59 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">ช่วงวันทำการเปลี่ยนกลุ่มรายวิชา</td>
+                            <td class="px-4 py-2 text-center">20 เม.ย. 2569 8:30 น.</td>
+                            <td class="px-4 py-2 text-center">22 เม.ย. 2569 23:59 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">ช่วงลดรายวิชาโดยได้รับค่าหน่วยกิตคืนเต็ม</td>
+                            <td class="px-4 py-2 text-center">17 เม.ย. 2569 8:30 น.</td>
+                            <td class="px-4 py-2 text-center">22 เม.ย. 2569 23:59 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">ลงทะเบียนล่าช้า</td>
+                            <td class="px-4 py-2 text-center">20 เม.ย. 2569 8:30 น.</td>
+                            <td class="px-4 py-2 text-center">22 เม.ย. 2569 23:59 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">งวดชำระเงินตามปกติ</td>
+                            <td class="px-4 py-2 text-center">27 เม.ย. 2569 8:30 น.</td>
+                            <td class="px-4 py-2 text-center">3 พ.ค. 2569 23:30 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">ช่วงพิมพ์ใบแจ้งหนี้ผ่าน WEB</td>
+                            <td class="px-4 py-2 text-center">27 เม.ย. 2569 8:30 น.</td>
+                            <td class="px-4 py-2 text-center">3 พ.ค. 2569 23:30 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">ชำระเงินที่เคาน์เตอร์ธนาคารกรุงไทย</td>
+                            <td class="px-4 py-2 text-center">27 เม.ย. 2569 8:30 น.</td>
+                            <td class="px-4 py-2 text-center">3 พ.ค. 2569 23:30 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">แจ้งคาดว่าจะสำเร็จการศึกษาผ่านระบบ</td>
+                            <td class="px-4 py-2 text-center">11 พ.ค. 2569 8:30 น.</td>
+                            <td class="px-4 py-2 text-center">8 มิ.ย. 2569 16:30 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">วันสุดท้ายของการเรียนการสอน</td>
+                            <td class="px-4 py-2 text-center">7 มิ.ย. 2569 8:00 น.</td>
+                            <td class="px-4 py-2 text-center">7 มิ.ย. 2569 16:30 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">ช่วงวันสอบปลายภาค</td>
+                            <td class="px-4 py-2 text-center">8 มิ.ย. 2569 8:00 น.</td>
+                            <td class="px-4 py-2 text-center">14 มิ.ย. 2569 16:30 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">วันปิดภาคการศึกษา</td>
+                            <td class="px-4 py-2 text-center">15 มิ.ย. 2569 8:30 น.</td>
+                            <td class="px-4 py-2 text-center">15 มิ.ย. 2569 16:30 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">วันสุดท้ายของการส่งผลการศึกษา</td>
+                            <td class="px-4 py-2 text-center">22 มิ.ย. 2569 8:00 น.</td>
+                            <td class="px-4 py-2 text-center">22 มิ.ย. 2569 16:30 น.</td>
+                        </tr>
+                        <tr class="hover:bg-green-100">
+                            <td class="px-4 py-2 text-left">วันประกาศผลการศึกษา</td>
+                            <td class="px-4 py-2 text-center">23 มิ.ย. 2569 16:30 น.</td>
+                            <td class="px-4 py-2 text-center">23 มิ.ย. 2569 16:30 น.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </body>
     <!-- Footer -->
     <footer class="bg-green-700 text-white py-6 text-center text-sm">
@@ -214,7 +308,7 @@
         }
 
         // Close dropdown when clicking outside
-        window.addEventListener('click', function(e) {
+        window.addEventListener('click', function (e) {
             const ids = ['academicDropdown', 'guideDropdown', 'loginDropdown', 'mainMenu', 'academicDropdownMobile', 'guideDropdownMobile'];
             ids.forEach(id => {
                 const el = document.getElementById(id);
@@ -226,4 +320,5 @@
     </script>
 
 </body>
+
 </html>
