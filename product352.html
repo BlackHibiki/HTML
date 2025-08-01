@@ -1,3 +1,68 @@
+<!-- หน้าแรก: เลือกประเภทผู้ใช้งาน (index.html) -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>เลือกหน้าใช้งาน</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .button {
+      display: block;
+      width: 200px;
+      margin: 10px auto;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .admin {
+      background-color: #1976d2;
+      color: white;
+    }
+    .admin:hover {
+      background-color: #0d47a1;
+    }
+    .customer {
+      background-color: #388e3c;
+      color: white;
+    }
+    .customer:hover {
+      background-color: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>เลือกหน้าใช้งาน</h1>
+    <a href="admin.html"><button class="button admin">สำหรับผู้ดูแลระบบ</button></a>
+    <a href="customer.html"><button class="button customer">สำหรับลูกค้า</button></a>
+  </div>
+</body>
+</html>
+
+
+<!-- หน้า 1: ผู้ดูแลระบบ (admin.html) -->
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -19,6 +84,9 @@
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
     label {
       display: block;
@@ -44,7 +112,7 @@
   </style>
 </head>
 <body>
-  <h1>ระบบขายของที่ระลึก 30 ปี สาขาวิชาวิทยาการคอมพิวเตอร์</h1>
+  <h1>ระบบขายของที่ระลึก 30 ปี<br>สาขาวิชาวิทยาการคอมพิวเตอร์</h1>
   <div class="form-section">
     <h2>หน้าผู้ดูแลระบบ (Admin)</h2>
     <form>
@@ -75,8 +143,8 @@
 </body>
 </html>
 
-<!-- หน้า 2: ลูกค้า -->
 
+<!-- หน้า 2: ลูกค้า (customer.html) -->
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -98,6 +166,9 @@
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
     label {
       display: block;
@@ -123,7 +194,7 @@
   </style>
 </head>
 <body>
-  <h1>ฟอร์มสั่งซื้อของที่ระลึก</h1>
+  <h1>ฟอร์มสั่งซื้อของที่ระลึก<br>ครบรอบ 30 ปี สาขาวิชาวิทยาการคอมพิวเตอร์</h1>
   <div class="form-section">
     <form>
       <label>ชื่อ-นามสกุล:</label>
