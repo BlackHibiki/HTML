@@ -1,70 +1,171 @@
+<!-- หน้า 1: ผู้ดูแลระบบ (admin.html) -->
 <!DOCTYPE html>
-<html lang="en">
-      <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<html>
+<html lang="th">
 <head>
-    <title>Form 101</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบขายของที่ระลึก - ผู้ดูแล</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 20px;
+      background: #f9f9f9;
+    }
+    h1 {
+      color: #3e3e3e;
+    }
+    .form-section {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+    }
+    input[type="submit"] {
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    input[type="submit"]:hover {
+      background-color: #0d47a1;
+    }
+  </style>
+</head>
 <body>
-    ร้านค้าขายของที่ระลึก สาขาวิทยาการคอมพิวเตอร์
+  <h1>ระบบขายของที่ระลึก 30 ปี<br>สาขาวิชาวิทยาการคอมพิวเตอร์</h1>
+  <div class="form-section">
+    <h2>หน้าผู้ดูแลระบบ (Admin)</h2>
+    <form>
+      <label>ประเภทสินค้า:</label>
+      <select>
+        <option>เสื้อ</option>
+        <option>กระเป๋า</option>
+        <option>แก้ว</option>
+        <option>หมวก</option>
+        <option>ร่ม</option>
+        <option>เข็มกลัด</option>
+        <option>สมุด</option>
+        <option>ปากกา</option>
+      </select>
 
-        admin สำหรับจัดเตรียมสินค้า
+      <label>รายละเอียด (เช่น สี, ขนาด):</label>
+      <input type="text" name="details">
 
-        <form action="" method="post">
-            <h1>เสื้อ</h1>
-            <label for="productsize">ขนาดสินค้า</label>
-            ขนาด xs, s, m, l, xl, xxl, 3xl
-            <select name="size" id="">
-                <option value="">-- กรุณาเลือกขนาด --</option>    
-                <option value="xs">XS</option>
-                <option value="s">S</option>
-                <option value="m"selected>M</option>
-                <option value="l">L</option>
-                <option value="xl">XL</option>
-                <option value="xxl">XXL</option>
-                <option value="3xl">3XL</option>
+      <label>รูปภาพสินค้า:</label>
+      <input type="file" accept="image/*">
 
-             สี 
-             <label for="prdcolor">สี</label>
-             <input type="radio" name="prdcolor" value="blue">น้ำเงิน
-             <input type="radio" name="prdcolor" value="black">ดำ
-             <input type="radio" name="prdcolor" value="grey">เทา
-             <input type="radio" name="prdcolor" value="white">ขาว
-             
+      <label>ราคา (บาท):</label>
+      <input type="number" name="price" min="0">
 
-             ราคา 
-             <label for="price">ราคา</label>
-             <input type="number"name="price" id="price" min="0" step="10" value="0.00">
-            
-             
+      <input type="submit" value="เพิ่มสินค้า">
+    </form>
+  </div>
+</body>
+</html>
 
-             
-             จำนวน
-            <input type="number" name="quantity" id="quantity">
 
-            ชื่อรุ่น
-            <input type="text" name="modelname" id="modelname" placeholder="ชื่อรุ่น">
-             
-            รายละเอียดสินค้า
-            <textarea type="text" name="description" id="description" rows="10" placeholder="รายละเอียดสินค้า" maxlength="5000"></textarea>
+<!-- หน้า 2: ลูกค้า (customer.html) -->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบสั่งซื้อของที่ระลึก - ลูกค้า</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 20px;
+      background: #e8f5e9;
+    }
+    h1 {
+      color: #2e7d32;
+    }
+    .form-section {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+    }
+    input[type="submit"] {
+      background-color: #388e3c;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    input[type="submit"]:hover {
+      background-color: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+  <h1>ฟอร์มสั่งซื้อของที่ระลึก<br>ครบรอบ 30 ปี สาขาวิชาวิทยาการคอมพิวเตอร์</h1>
+  <div class="form-section">
+    <form>
+      <label>ชื่อ-นามสกุล:</label>
+      <input type="text" name="fullname" required>
 
-            วันที่ขาย ตั้งแต่วันที่-สิ้นสุด
-            <input type="date" name="startdate" id="startdate">
-            <input type="date" name="enddate" id="enddate"
-            min="2023-10-01" max="2024-07-31">
-                
+      <label>ที่อยู่:</label>
+      <textarea name="address" rows="3"></textarea>
 
-            รูปภาพสินค้า
-            <input type="file" name="productimage" id="productimage" accept="image/*">
+      <label>เบอร์โทร:</label>
+      <input type="tel" name="phone">
 
-            <input type="submit" value="บันทึก">
-            <input type="reset" value="ล้างข้อมูล">
-        </form>
+      <label>รายการสินค้า (ระบุชื่อ สี ขนาด จำนวน):</label>
+      <textarea name="items" rows="4"></textarea>
 
-    แก้วน้ำ
-    กระเป๋า
-    ร่ม
-    หมวก
+      <label>แนบรูปสลิปชำระเงิน:</label>
+      <input type="file" accept="image/*">
 
+      <label>วันที่ซื้อ:</label>
+      <input type="date" name="buydate">
+
+      <label>เลือกรูปแบบการรับสินค้า:</label>
+      <select name="delivery">
+        <option value="รับเอง">รับเอง</option>
+        <option value="จัดส่ง">จัดส่ง</option>
+      </select>
+
+      <label>ช่องทางชำระเงิน:</label>
+      <select name="payment">
+        <option value="โอนผ่านบัญชีธนาคาร">โอนผ่านบัญชีธนาคาร</option>
+        <option value="พร้อมเพย์">พร้อมเพย์</option>
+        <option value="ชำระเงินปลายทาง">ชำระเงินปลายทาง</option>
+      </select>
+
+      <input type="submit" value="ยืนยันการสั่งซื้อ">
+    </form>
+  </div>
 </body>
 </html>
