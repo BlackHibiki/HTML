@@ -9,8 +9,10 @@
         <input type="email" id="email" name="email" required>
         <label for="number">Age:</label>
         <input type="number" name="age" min="1" max="100" placeholder="Enter your age" required>
-        
-
+        <label for="zipcode">รหัสไปรษณีย์:</label>
+        <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{5}" title="กรุณากรอกรหัสไปรษณีย์ 5 หลัก" required>
+        <label for="id_card">หมายเลขบัตรประชาชน:</label>
+        <input type="text" id="id_card" name="id_card" pattern="[0-9]{13}" title="กรุณากรอกหมายเลขบัตรประชาชน 13 หลัก" required>
         <label for="message">Message:</label>
         <textarea id="message" name="message" required></textarea>
 
