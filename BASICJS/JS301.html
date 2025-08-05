@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ระบบสินค้าคงคลัง</title>
+  <style>
+    .out-of-stock {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>รายการสินค้า</h2>
+  <div id="product-container"></div>
+
+  <script>
+    const products = [
+      { name: "product A", price: 45, stock: 10 },
+      { name: "product B", price: 25, stock: 0 },
+      { name: "product C", price: 30, stock: 3 },
+      { name: "product D", price: 15, stock: 0 },
+      { name: "product E", price: 13, stock: 20 }
+    ];
+
+    const container = document.getElementById("product-container");
+
+    products.forEach(product => {
+      const p = document.createElement("p");
+
+      if (product.stock === 0) {
+        p.textContent = `${product.name} - สินค้าหมด`;
+        p.classList.add("out-of-stock");
+      } else {
+        p.textContent = `${product.name} - ราคา ${product.price} บาท`;
+      }
+
+      container.appendChild(p);
+    });
+  </script>
+</body>
+</html>

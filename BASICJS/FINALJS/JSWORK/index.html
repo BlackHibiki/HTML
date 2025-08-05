@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>Top 10 Anime - MyAnimeList</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ece9e6, #ffffff);
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #4A148C;
+      margin-bottom: 2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      padding: 0.75rem;
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    th {
+      background: #f3f3f3;
+    }
+
+    td img {
+      width: 50px;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    canvas {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #999;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Top 10 อนิเมะจาก MyAnimeList</h1>
+
+    <div class="card">
+      <h2>คะแนนอนิเมะ (แผนภูมิแท่ง)</h2>
+      <canvas id="animeChart"></canvas>
+    </div>
+
+    <div class="card">
+      <h2>รายชื่ออนิเมะ</h2>
+      <table id="animeTable">
+        <thead>
+          <tr>
+            <th>ภาพ</th>
+            <th>ชื่อเรื่อง</th>
+            <th>คะแนน</th>
+            <th>ประเภท</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="footer">
+      แหล่งข้อมูล: <a href="https://jikan.moe/" target="_blank">Jikan API</a>
+    </div>
+  </div>
+
+  <script>
+    async function loadAnime() {
+      const res = await fetch('https://api.jikan.moe/v4/top/anime?limit=10');
+      const json = await res.json();
+      const animeList = json.data;
+
+      const names = animeList.map(a => a.title);
+      const scores = animeList.map(a => a.score);
+      const colors = [
+        '#F44336', '#E91E63', '#9C27B0', '#673AB7', '#3F51B5',
+        '#2196F3', '#00BCD4', '#009688', '#4CAF50', '#FF9800'
+      ];
+
+      // แสดงแผนภูมิแท่ง
+      const ctx = document.getElementById('animeChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: names,
+          datasets: [{
+            label: 'คะแนน (Score)',
+            data: scores,
+            backgroundColor: colors,
+            borderColor: colors.map(c => c),
+            borderWidth: 1,
+            borderRadius: 5
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              backgroundColor: '#333',
+              titleColor: '#fff',
+              bodyColor: '#fff'
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 10
+            },
+            x: {
+              ticks: {
+                maxRotation: 45,
+                minRotation: 0,
+                font: {
+                  size: 12
+                }
+              }
+            }
+          }
+        }
+      });
+
+      // เติมตาราง
+      const tbody = document.querySelector('#animeTable tbody');
+      animeList.forEach(anime => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><img src="${anime.images.jpg.image_url}" alt="${anime.title}"></td>
+          <td>${anime.title}</td>
+          <td>${anime.score}</td>
+          <td>${anime.type}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    loadAnime();
+  </script>
+
+</body>
+</html>

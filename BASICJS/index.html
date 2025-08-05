@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+</body>
+<script>
+    console.log("Hello, World!");
+    
+    let name = "Attawit";
+    let age = 30;
+    let isStudent = false;
+
+    const major = "Computer Science";
+    const start = 0.00;
+    const end = 100.00;
+    // JS#1
+    //ข้อ 1
+    const birthDate = 1978;
+    const currentYear = 2025;
+    const ageInYears = currentYear - birthDate;
+    console.log(`Age: ${ageInYears}`);
+    //ข้อ 2
+    const student={
+        name: "Attawit",
+        score:60,
+        isPass:false,
+    }
+
+    console.log(`name: ${student.name} score: ${student.score} isPass: ${student.isPass}`);
+
+    if (student.score >= 50) {
+        student.isPass = true;
+    } else {
+        student.isPass = false;
+    }
+     console.log(`name: ${student.name} score: ${student.score} isPass: ${student.isPass}`);
+    //ข้อ 3
+    for (let i = 0; i <= 20; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+    }
+    //ข้อ 4
+    let weather = "cold";
+    switch (weather) {
+        case "hot":
+            console.log("It's hot outside.");
+            break;
+        case "cold":
+            console.log("It's cold outside.");
+            break;
+        case "rainy":
+            console.log("It's rainy outside.");
+            break;
+        default:
+            console.log("Weather is unpredictable.");
+    }
+    //ข้อ 5
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+    console.log(`Sum of numbers: ${sum}`);
+    //JS#2
+    //ข้อ 1
+    function calculateArea(width, height) {
+       return width * height;
+    }
+    let width = 5;
+    let height = 10;
+    let area = calculateArea(width, height);
+    console.log(`Area: ${area}`);
+    //ข้อ 2
+    let product = ["product1", "product2", "product3", "product4", "product5"];
+    console.log(`Products: ${product}`);
+    product.push("product0");
+    console.log(`Updated Products: ${product}`);
+    product.pop();
+    console.log(`After pop: ${product}`);
+    //ข้อ 3
+    let names = ["Alice", "Bob", "Charlie", "David", "Eve"];
+    let longnames = names.filter(name => name.length > 5);
+    console.log(`Names : ${names}`);
+    console.log(`Long names: ${longnames}`);
+    //ข้อ 4
+    let prices = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+    let discountedPrices = prices.map(price => price * 0.9);
+    console.log(`Original Prices: ${prices}`);
+    console.log(`Discounted Prices: ${discountedPrices}`);
+    //ข้อ 5
+    function getAverageScore(scores) {
+        let total = scores.reduce((sum, score) => sum + score, 0);
+        let average = total / scores.length;
+        return average;
+    }
+    let scores = [85, 90, 78, 92, 88, 95, 80, 75, 82];
+    let averageScore = getAverageScore(scores);
+    console.log(`Average Score: ${averageScore}`);
+</script>   
+</html>

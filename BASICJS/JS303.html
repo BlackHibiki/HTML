@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Conditional Rendering</title>
+  <style>
+    #user-profile, #guest-message {
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin: 10px auto;
+      width: 300px;
+      text-align: center;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div id="user-profile">
+    สวัสดี 352! ยินดีต้อนรับกลับมา
+  </div>
+
+  <div id="guest-message">
+    สวัสดีผู้เยี่ยมชม! กรุณาเข้าสู่ระบบเพื่อใช้งานฟีเจอร์ทั้งหมด
+  </div>
+
+  <script>
+
+    const isLoggedIn = false; // เปลี่ยนเป็น true หากผู้ใช้ล็อกอินอยู่
+
+    const userDiv = document.getElementById("user-profile");
+    const guestDiv = document.getElementById("guest-message");
+
+    if (isLoggedIn) {
+      userDiv.style.display = "block";
+      guestDiv.style.display = "none";
+    } else {
+      userDiv.style.display = "none";
+      guestDiv.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>

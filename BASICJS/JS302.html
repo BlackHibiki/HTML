@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>แกลเลอรีภาพ</title>
+  <style>
+    #gallery img {
+      width: 80px;
+      margin: 5px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    #gallery img:hover {
+      border-color: #666;
+    }
+
+    #main-image {
+      display: block;
+      margin: 20px auto;
+      max-width: 400px;
+      border: 3px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align: center;">แกลเลอรีภาพ</h2>
+  <img id="main-image" src="" alt="Main Image">
+
+  <div id="gallery" style="text-align: center;"></div>
+
+  <script>
+    const thumbnails = [
+      "https://eatwellconcept.com/wp-content/uploads/2020/03/assorted-mixed-fruits_74190-6961.jpg",
+      "https://www.maetoi.com/wp-content/uploads/2023/08/colorful-fruits-tasty-fresh-ripe-juicy-white-desk.webp",
+      "https://image.makewebcdn.com/makeweb/m_1920x0/K5HN2G4Kq/DefaultData/fruit_07.jpg",
+      "https://shopee.co.th/blog/wp-content/uploads/2022/02/durian.jpg",
+      "https://static.wixstatic.com/media/c0c65f_6819294a8dab478991d1272f6260beff~mv2.png/v1/fill/w_568,h_378,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/c0c65f_6819294a8dab478991d1272f6260beff~mv2.png"
+    ];
+    const gallery = document.getElementById("gallery");
+    const mainImage = document.getElementById("main-image");
+    mainImage.src = thumbnails[0];
+    thumbnails.forEach(url => {
+      const thumb = document.createElement("img");
+      thumb.src = url;
+      thumb.addEventListener("click", () => {
+        mainImage.src = url;
+      });
+
+      gallery.appendChild(thumb);
+    });
+  </script>
+
+</body>
+</html>
